@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 
 class Pikachu extends React.Component {
 
@@ -9,7 +9,7 @@ class Pikachu extends React.Component {
       size: 100
     };
   }
-  
+
   resizePikachu = () => {
     const pikachu = document.getElementById("pikachu");
     pikachu.height = this.state.size;
@@ -35,6 +35,10 @@ class Pikachu extends React.Component {
         <button onClick={this.makeSmaller}>Smaller!</button>
       </div>
     )
+  }
+
+  componentdidUpdate = () => {
+    this.resizePikachu()
   }
 }
 
